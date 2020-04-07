@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WandioComLib.Demo", "WandioComLib.Demo\WandioComLib.Demo.csproj", "{94650742-00B5-4C21-8EFF-3B9EA384DA00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94650742-00B5-4C21-8EFF-3B9EA384DA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94650742-00B5-4C21-8EFF-3B9EA384DA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94650742-00B5-4C21-8EFF-3B9EA384DA00}.Debug|x86.ActiveCfg = Debug|x86
+		{94650742-00B5-4C21-8EFF-3B9EA384DA00}.Debug|x86.Build.0 = Debug|x86
+		{94650742-00B5-4C21-8EFF-3B9EA384DA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94650742-00B5-4C21-8EFF-3B9EA384DA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94650742-00B5-4C21-8EFF-3B9EA384DA00}.Release|x86.ActiveCfg = Release|x86
+		{94650742-00B5-4C21-8EFF-3B9EA384DA00}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {684C37FE-5B2C-4B04-BB8F-E736EC0286D6}
+	EndGlobalSection
+EndGlobal
