@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace WandioComLib.Controls
 {
     [Guid("3AF22B4A-A941-4DBF-8ED5-EB6DAFF538E5")]
-    [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+    [TypeLibType(TypeLibTypeFlags.FDual | TypeLibTypeFlags.FDispatchable)]
+    [ComVisible(true)]
     public interface ITextBoxCheck
     {
         [DispId(1)]

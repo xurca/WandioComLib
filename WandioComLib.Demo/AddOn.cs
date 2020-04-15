@@ -1,6 +1,11 @@
 ﻿using SAPbouiCOM;
 using System;
 using System.Globalization;
+using SWF = System.Windows.Forms;
+using WandioComLib.Controls;
+using WandioComLib.Events;
+using WandioComLib.Interfaces;
+using UI = WandioComLib.UI;
 //using WandioComLib.Controls;
 
 namespace WandioComLib.Demo
@@ -89,21 +94,44 @@ $"Error occurred during form initialization: " + $"{sapForm.Title}. " + ex.ToStr
 
         private static void OpenSystemForm(Form form)
         {
+            //TextBoxCheckSample(form);
+            TreeViewSample(form);
+        }
+
+        private static void TreeViewSample(Form form)
+        {
             var item = form.Items.Item("38");
-
-            var classId = "WandioComLib.Controls.TextBoxCheck";
+            var classId = "WandioComLib.Controls.TreeView";
             var newItem = form.Items.Add("ActiveX1", BoFormItemTypes.it_ACTIVE_X);
-
-            newItem.TextStyle = item.TextStyle;
-            newItem.FontSize = item.FontSize;
-            newItem.Height = 50;
-            newItem.Width = 200;
-
             newItem.Top = item.Top;
             newItem.Left = item.Left + item.Width + 20;
+            newItem.TextStyle = item.TextStyle;
+            newItem.FontSize = item.FontSize;
+            newItem.Width = item.Width + 200;
 
             var activeXControl = newItem.Specific as ActiveX;
             activeXControl.ClassID = classId;
+            var myItem1 = activeXControl.Object as UI.TreeView;
+            var myItem2 = activeXControl.Object as TreeViewControl;
+
+            myItem1.AddNode("Root");
+        }
+
+        private static void TextBoxCheckSample(Form form)
+        {
+            //var item = form.Items.Item("38");
+
+            //var classId = "WandioComLib.Controls.TextBoxCheck";
+            //var newItem = form.Items.Add("ActiveX1", BoFormItemTypes.it_ACTIVE_X);
+
+            //newItem.TextStyle = item.TextStyle;
+            //newItem.FontSize = item.FontSize;
+
+            //newItem.Top = item.Top;
+            //newItem.Left = item.Left + item.Width + 20;
+
+            //var activeXControl = newItem.Specific as ActiveX;
+            //activeXControl.ClassID = classId;
 
             //var myItem1 = activeXControl.Object as TextBoxCheck;
             //var myItem2 = activeXControl.Object as ITextBoxCheck;
@@ -111,12 +139,11 @@ $"Error occurred during form initialization: " + $"{sapForm.Title}. " + ex.ToStr
             //var myItem4 = activeXControl.Object as ITextBoxCheckEvents_Event;
             //var myItem5 = activeXControl.Object as TextBoxCheckClass;
 
-            //myItem2.PlaceHolder = "test1";
-            //myItem2.OnCheckBoxClick += (val) =>
+            //myItem1.PlaceHolder = "test1";
+            //myItem1.OnCheckBoxClick += (val) =>
             //{
-
+            //    SapApp.MessageBox($"Fired! {val}");
             //};
-
         }
     }
 }
